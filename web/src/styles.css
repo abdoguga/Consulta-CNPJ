@@ -1,0 +1,423 @@
+:root {
+  --cor-fundo: #f4f6fb;
+  --cor-superficie: #ffffff;
+  --cor-borda: #e2e8f0;
+  --cor-texto: #0f172a;
+  --cor-suave: #64748b;
+  --cor-primaria: #1d4ed8;
+  --cor-primaria-escura: #1e40af;
+  --sombra: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.06);
+  --raio: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #eef2ff 0%, var(--cor-fundo) 260px);
+  color: var(--cor-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 40px 20px 48px;
+}
+
+.topo__titulo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+.topo__subtitulo {
+  color: var(--cor-suave);
+  margin: 0 0 28px;
+}
+
+.conteudo {
+  align-items: start;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+}
+
+.coluna-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.cartao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 22px;
+}
+
+/* Busca ------------------------------------------------------------------ */
+
+.busca__label {
+  color: var(--cor-suave);
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.busca__linha {
+  display: flex;
+  gap: 10px;
+}
+
+.busca__input {
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  flex: 1;
+  font-family: inherit;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  min-width: 0;
+  padding: 12px 14px;
+}
+
+.busca__input:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+  outline: none;
+}
+
+.busca__botao {
+  background: var(--cor-primaria);
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 22px;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
+.busca__botao:hover:not(:disabled) {
+  background: var(--cor-primaria-escura);
+}
+
+.busca__botao:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.alerta {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #b91c1c;
+  font-size: 14px;
+  margin: 14px 0 0;
+  padding: 11px 14px;
+}
+
+.dica {
+  color: var(--cor-suave);
+  font-size: 15px;
+  margin: 0;
+  padding: 4px 2px;
+}
+
+/* Empresa ---------------------------------------------------------------- */
+
+.empresa {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 24px;
+}
+
+.empresa__cabecalho {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.empresa__razao {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+}
+
+.empresa__fantasia {
+  color: var(--cor-suave);
+  margin: 0 0 4px;
+}
+
+.empresa__cnpj {
+  color: var(--cor-primaria);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.badge {
+  border-radius: 999px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  text-transform: uppercase;
+}
+
+.badge--ativa {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge--inativa {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge--neutra {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.empresa__grade {
+  border-top: 1px solid var(--cor-borda);
+  display: grid;
+  gap: 16px 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.campo__rotulo {
+  color: var(--cor-suave);
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.campo__valor {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.empresa__secao {
+  border-top: 1px solid var(--cor-borda);
+  margin-top: 20px;
+  padding-top: 18px;
+}
+
+.empresa__titulo {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.empresa__texto {
+  margin: 0;
+}
+
+.socios {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socios__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  justify-content: space-between;
+}
+
+.socios__nome {
+  font-weight: 500;
+}
+
+.socios__qualificacao {
+  color: var(--cor-suave);
+  font-size: 14px;
+}
+
+.empresa__rodape {
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-suave);
+  font-size: 13px;
+  margin-top: 20px;
+  padding-top: 14px;
+}
+
+/* Histórico -------------------------------------------------------------- */
+
+.historico {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+.historico__titulo {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.historico__vazio {
+  color: var(--cor-suave);
+  font-size: 14px;
+  margin: 0;
+}
+
+.historico__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.historico__item {
+  align-items: stretch;
+  border-radius: 10px;
+  display: flex;
+  gap: 4px;
+}
+
+.historico__item:hover {
+  background: #f8fafc;
+}
+
+.historico__principal {
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-family: inherit;
+  gap: 2px;
+  min-width: 0;
+  padding: 9px 10px;
+  text-align: left;
+}
+
+.historico__razao {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historico__cnpj {
+  color: var(--cor-primaria);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.historico__meta {
+  color: var(--cor-suave);
+  font-size: 12px;
+}
+
+.historico__remover {
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  color: var(--cor-suave);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 10px;
+}
+
+.historico__remover:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Rodapé ----------------------------------------------------------------- */
+
+.rodape {
+  color: var(--cor-suave);
+  font-size: 13px;
+  margin-top: 36px;
+  text-align: center;
+}
+
+.rodape a {
+  color: var(--cor-primaria);
+}
+
+@media (max-width: 900px) {
+  .app {
+    padding: 28px 16px 36px;
+  }
+
+  .conteudo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .historico {
+    position: static;
+  }
+
+  .topo__titulo {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 520px) {
+  .busca__linha {
+    flex-direction: column;
+  }
+
+  .busca__botao {
+    width: 100%;
+  }
+
+  .empresa__cabecalho {
+    flex-direction: column;
+  }
+}
